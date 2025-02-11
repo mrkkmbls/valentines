@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Proposal</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: #F88379;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .square-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes-btn {
+            background: green;
+            color: white;
+        }
+        .no-btn {
+            background: red;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="question">
+        <h1>bb, will you be my Valentine?</h1>
+        <img src="https://i.pinimg.com/736x/e5/63/da/e563dad541582eb79a2d357aca805c9b.jpg" alt="Cute Image" class="square-image">
+        <div class="buttons">
+            <button class="yes-btn" onclick="showLove()">Yes</button>
+            <button class="no-btn" onclick="doNothing()">No</button>
+        </div>
+    </div>
+    
+    <div class="container hidden" id="loveMessage">
+        <h1>Yay! ❤️ Happy Valentine's Day! iloveyou >3< </h1>
+        <img src="valentine.gif" alt="Happy Valentine" style="width: 80%; max-width: 300px;">
+    </div>
+    
+    <script>
+        function showLove() {
+            document.getElementById('question').classList.add('hidden');
+            document.getElementById('loveMessage').classList.remove('hidden');
+        }
+        
+        function doNothing() {
+            // No action needed
+        }
+    </script>
+</body>
+</html>
